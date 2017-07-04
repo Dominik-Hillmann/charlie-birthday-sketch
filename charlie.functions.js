@@ -8,6 +8,7 @@ var Button = function(x, y, xSpeed, ySpeed, size)
    this.size = size;
 }
 
+// checks whether a click takes place with a radius of (distance), probably 20px or so
 var isWithinDistance = function(xMouse, yMouse, xButton, yButton, distance)
 {
    if(Math.sqrt(Math.pow(xMouse - xButton, 2) + Math.pow(yMouse - yButton, 2)) <= distance)
@@ -16,15 +17,17 @@ var isWithinDistance = function(xMouse, yMouse, xButton, yButton, distance)
       return false;
 }
 
+// saves current points, where they need to be and...
 var score =
 {
    current : 0,
-   goal : 50,
+   goal : 40,
+   created: false,
 };
-
+// ... what the string is that has to be display according to current score
 score.currentString = function()
 {
-   // hier sind cases als ein Wert zu sehen, an der der String zu sehen sein soll
+   // deliberate fallthrough to return strings in range of cases
    switch (this.current)
    {
       case 0:
@@ -86,10 +89,7 @@ score.currentString = function()
          return "*leises Räuspern*";
          break;
       default:
-         return "Wir müssen das Experiment abbrechen. Gib ihm das kleine Geschenk.";
+         return "Wir müssen das Experiment abbrechen. Gib ihm das kleinere Geschenk.";
          break;
    }
 }
-
-// xSpeed
-// ySpeed

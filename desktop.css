@@ -1,0 +1,248 @@
+/* Important Note: in order not everything shrinks together, the big elements need to have a min-width: 638px;
+Standard distance of the body to the side is 50px.*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Questrial');
+
+/* WICHTIG NICHT GENUTZTE ENTFERNEN WEGEN LADEZEITEN */
+/*Loading fonts Kameron for Text and Questrial for bigger stuff*/
+
+
+/***** Rules for all of the doc *****/
+
+html,body {
+    padding: 0;
+    margin: 0;
+    background-color: #121420;
+    background-image: url(../pictures/background%20dots.png);
+    background-size: 200px 200px;
+}
+*:link {
+    text-decoration: none;
+}
+
+/***** Header Design *****/
+
+header {
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    min-width: 638px;
+    border-bottom: 1px solid #444554;
+}
+#logocontainer {
+    display: inline-block;
+    min-width: 175px;
+    height: 50px;
+}
+#logocontainer img {
+    height: 40px;
+    width: auto;
+
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+#logocontainer a {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle; /*WICHTIG: Lsg des Problems, dass "BRAINRAIN" auf der Baseline verblieb: 1. das a-Element ansprechen, 2. VERTICAL-ALIGN: ist dafuer verantwortlich!*/
+}
+#logocontainer h1 {
+    display: inline-table;
+    font-family: 'Questrial', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+#navigation {
+    width: 50%;
+    min-width: 300px;
+    display: inline-block;
+    float: right;
+    font-family: 'Open Sans:600', sans-serif;
+    font-size: 13px;
+    text-align: right;
+    height: 13px;
+    margin-top: 18.5px;
+    margin-bottom: 18.5px;
+}
+#navigation li {
+    display: inline-block;
+    color: #444554;
+    margin-left: 5%;
+    text-align: right;
+    transition: color 0.25s ease-in-out;
+}
+#navigation #current {
+    color: white;
+}
+#navigation li:hover {
+    color: white;
+}
+
+/**** Footer Design ****/
+
+footer {
+    display: block;
+    min-width: 638px;
+    margin-top: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.nextprev {
+    width: 100%;
+    height: 40px;
+}
+.pfeilbox {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+footer div div a *:hover {
+    margin-right: 0px;
+    margin-left: 0px;/*fertig machen*/
+}
+.pfeilbox a {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.pfeilbox a p {
+    color: white;
+    padding-bottom: px;
+}
+footer div a img {
+    height: 13px;
+    margin-top: ;
+}
+#prev {
+    width: 40%;
+    margin-left: 20px;
+}
+#prev a img {
+    margin-right: 5px;
+}
+#next a img {
+    margin-left: 5px;
+}
+#next {
+    width: 40%;
+    display: inline-block;
+    float: right;
+    text-align: right;
+    margin-right: 20px;
+}
+#copyright {
+    width: 100%;
+    border-top: 1px solid;
+    border-top-color: #444554;
+    min-width: 638px;
+    clear: both;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 7px
+}
+#c {
+    float: left;
+    margin-left: 20px;
+}
+#copyright div, #copyright p {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 12px;
+    margin-top: 10px
+}
+#brainrainspan {
+    font-family: 'Questrial', 'Open Sans', sans-serif;
+}
+#madewith {
+    text-align: right;
+    float: right;
+    margin-right: 20px;
+}
+#heart {
+    color: red;
+}
+footer div p img {
+    display: inline-block;
+    height: 12px;
+    padding-bottom: -10px;
+}
+#copyright * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#copyright div a img {
+    height: 20px;
+    margin-right: 4px;
+    transition: padding 0.3s ease-in-out;
+}
+#copyright div a img:hover {
+    padding-bottom: 7px;
+}
+
+/***** text design *****/
+.text {
+    min-width: 638px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.text div {
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+.text div h2 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 27px;
+    margin-bottom: 20px;
+    text-align: middle;
+}
+.text div p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.textbody span {
+    float: left;
+    font-size: 70px;
+    margin-right: 10px;
+    font-family: 'Questrial', 'Open Sans', sans-serif;
+    line-height: 55px;
+}
+.text div p i {
+    margin-top: 14px;
+    display: block;
+}
+
+/* *** Dropdown Menu for Pictures *** */
+
+.drop {
+   display: inline-block;
+   color: white;
+   /*height: 0px;*/
+   /*width: 0px;*/
+   overflow: hidden;
+}
+.showDrop {
+   display: inline-block;
+   color: #444554;
+   margin-left: 8px;
+   margin-bottom: -3.5px;
+   transition: color 0.25s ease-in-out;
+   overflow: hidden;
+}
+.showDrop:hover {
+   color: white;
+}
+
+/* Bei mobiler Ansicht das Menü unter das Brain Rain-Logo rutschen lassen */
+/***** Header Design (mobile) *****/
