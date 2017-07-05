@@ -8,7 +8,7 @@ var Button = function(x, y, xSpeed, ySpeed, size)
    this.size = size;
 }
 
-// checks whether a click takes place with a radius of (distance), probably 20px or so
+// checks whether a click takes place within a radius of (distance), probably 20px or so
 var isWithinDistance = function(xMouse, yMouse, xButton, yButton, distance)
 {
    if(Math.sqrt(Math.pow(xMouse - xButton, 2) + Math.pow(yMouse - yButton, 2)) <= distance)
@@ -17,14 +17,14 @@ var isWithinDistance = function(xMouse, yMouse, xButton, yButton, distance)
       return false;
 }
 
-// saves current points, where they need to be and...
+// saves current points, where they need to be and ...
 var score =
 {
    current : 0,
    goal : 40,
    created: false,
 };
-// ... what the string is that has to be display according to current score
+// ... what the string is that has to be displayed according to current score
 score.currentString = function()
 {
    // deliberate fallthrough to return strings in range of cases
@@ -40,6 +40,7 @@ score.currentString = function()
       case 5:
       case 6:
       case 7:
+         return "Hm. Eine gute Gelegenheit, dich ein wenig zu beleidigen.\nDu stinkst. Sehr sogar."
       case 8:
       case 9:
          return "Eigentlich wollen wir dich nur nerven";
@@ -60,6 +61,8 @@ score.currentString = function()
          break;
       case 20:
       case 21:
+         return "Gibt es Probleme mit dem Spiel? Dann ruf mich Angela!\nNein ehrlich. Ist mir egal."
+         break;
       case 22:
       case 23:
       case 24:
@@ -83,13 +86,17 @@ score.currentString = function()
          break;
       case 35:
       case 36:
+         return "Wir könnten dich hier bis zur Fingerarthrose treiben.\nDas weißt du hoffentlich.";
+         break;
       case 37:
       case 38:
+         return "Aber wir sind gütig. Nicht jetzt. Aber bald.";
+         break;
       case 39:
          return "*leises Räuspern*";
          break;
       default:
-         return "Wir müssen das Experiment abbrechen. Gib ihm das kleinere Geschenk.";
+         return "ABBRUCH! Gib ihm das kleinere Geschenk.";
          break;
    }
 }
