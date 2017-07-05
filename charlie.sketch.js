@@ -76,7 +76,7 @@ function mouseClicked()
    }
    else
       console.log("NEIN");
-   //return false; // to prevent default browser behaviour from reacting to the mouse click
+   score.total++;
 }
 
 function draw()
@@ -95,7 +95,10 @@ function draw()
    {
       score.created = true;
       var link = document.getElementsByTagName("body")[0].appendChild(document.createElement("p"));
-      link = link.appendChild(document.createElement("a")).appendChild(document.createTextNode("Nimm das und RENNE!"));
+      link = link.appendChild(document.createElement("a")).appendChild(document.createTextNode
+         (
+            "Nimm das und RENNE! Du hast " + score.current + " von " + score.total + " Mal getroffen. Erbärmlich."
+         ));
       document.getElementsByTagName("a")[0].href = linkPresent;
       document.getElementsByTagName("p")[0].style.color = "white";
    }

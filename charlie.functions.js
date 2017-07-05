@@ -21,7 +21,8 @@ var isWithinDistance = function(xMouse, yMouse, xButton, yButton, distance)
 var score =
 {
    current : 0,
-   goal : 40,
+   total: 0,
+   goal : 42,
    created: false,
 };
 // ... what the string is that has to be displayed according to current score
@@ -40,14 +41,16 @@ score.currentString = function()
       case 5:
       case 6:
       case 7:
-         return "Hm. Eine gute Gelegenheit, dich ein wenig zu beleidigen.\nDu stinkst. Sehr sogar."
+         return "Hm. Eine gute Gelegenheit, dich ein wenig zu beleidigen.\nDu stinkst. Sehr sogar.";
       case 8:
       case 9:
-         return "Eigentlich wollen wir dich nur nerven";
+         return "Eigentlich wollen wir dich nur nerven.";
          break;
       case 10:
       case 11:
       case 12:
+         return "Ein Tipp: du musst deine Nase treffen.";
+         break;
       case 13:
       case 14:
          return "Wie lange das wohl noch dauert?";
@@ -61,7 +64,7 @@ score.currentString = function()
          break;
       case 20:
       case 21:
-         return "Gibt es Probleme mit dem Spiel? Dann ruf mich Angela!\nNein ehrlich. Ist mir egal."
+         return "Gibt es Probleme mit dem Spiel? Dann ruf mich Angela!\nNein ehrlich. Ist mir egal.";
          break;
       case 22:
       case 23:
@@ -71,6 +74,8 @@ score.currentString = function()
       case 25:
       case 26:
       case 27:
+         return "Pro-Tipp: Alt + F4.";
+         break;
       case 28:
       case 29:
          return "Das ist viel zu langsam, Charlie.\nDu hast das Geschenk nicht verdient.";
@@ -93,6 +98,9 @@ score.currentString = function()
          return "Aber wir sind gütig. Nicht jetzt. Aber bald.";
          break;
       case 39:
+      case 40:
+      case 41:
+      case 42:
          return "*leises Räuspern*";
          break;
       default:

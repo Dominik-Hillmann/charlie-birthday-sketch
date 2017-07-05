@@ -13,3 +13,7 @@ a {
    font-family: monospace;
    font-size: 32px;
 }
+
+a:hover {
+   text-decoration: underline;
+}
